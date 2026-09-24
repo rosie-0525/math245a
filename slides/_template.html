@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- New lecture: copy this file to NN.html, edit the title and slides,
+       then add a line for it under "Lectures" in ../index.html. -->
+  <title>Lecture N — Math 245A</title>
+  <link rel="stylesheet" href="../reveal/reset.css">
+  <link rel="stylesheet" href="../reveal/reveal.css">
+  <link rel="stylesheet" href="../reveal/theme/white.css">
+  <link rel="stylesheet" href="../reveal/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../theme.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section class="title-slide">
+      <h1>Lecture N: Title</h1>
+      <p>Math 245A: Topics in algebraic geometry<br>Wanchun Shen · Stanford University</p>
+    </section>
+
+    <section>
+      <h2>Slide heading</h2>
+      <div class="defn"><b>Definition.</b> A variety $X$ is … </div>
+      <div class="thm"><b>Theorem.</b> If $X$ is …, then $$H^i(X, \mathcal{O}_X) = 0 \quad \text{for } i &gt; 0.$$</div>
+      <p class="fragment">This line appears on the next click.</p>
+      <aside class="notes">Speaker notes: press S to open the speaker view.</aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="../reveal/reveal.js"></script>
+<script src="../reveal/plugin/notes.js"></script>
+<script src="../reveal/plugin/math.js"></script>
+<script src="../reveal/plugin/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    katex: { local: '../katex' },
+    plugins: [RevealNotes, RevealMath.KaTeX, RevealHighlight],
+  });
+</script>
+</body>
+</html>

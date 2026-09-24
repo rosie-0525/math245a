@@ -1,0 +1,99 @@
+/* ------------------------------------------------------------
+   Math 245A — slide theme
+   Loaded after reveal/theme/white.css. Uses the typeface and
+   colours of rosie-0525.github.io.
+   ------------------------------------------------------------ */
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/newsreader-latin-400-normal.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/newsreader-latin-400-italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/newsreader-latin-500-normal.woff2) format("woff2");
+}
+
+:root {
+  --r-main-font: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --r-heading-font: var(--r-main-font);
+  --r-main-font-size: 40px;
+  --r-main-color: #232323;
+  --r-heading-color: #232323;
+  --r-heading-text-transform: none;
+  --r-heading-font-weight: 500;
+  --r-link-color: #35597d;
+  --r-link-color-dark: #1f3d5c;
+  --r-link-color-hover: #1f3d5c;
+  --r-selection-background-color: #35597d;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  text-align: left;
+}
+
+/* Title slide */
+
+.reveal .title-slide h1 {
+  font-size: 1.9em;
+  font-weight: 400;
+}
+
+.reveal .title-slide p {
+  color: #6b6a66;
+}
+
+/* Definition / theorem / example boxes:
+   <div class="thm"><b>Theorem.</b> …</div> */
+
+.reveal .defn,
+.reveal .thm,
+.reveal .ex {
+  margin: 0.6em 0;
+  padding: 0.5em 0.8em;
+  border-left: 4px solid #35597d;
+  background: #f4f6f8;
+}
+
+.reveal .thm {
+  font-style: italic;
+}
+
+.reveal .thm b,
+.reveal .defn b,
+.reveal .ex b {
+  font-style: normal;
+}
+
+.reveal .ex {
+  border-left-color: #b9b6ae;
+  background: #f7f6f3;
+}
+
+.reveal .small {
+  font-size: 0.75em;
+}
+
+.reveal .muted {
+  color: #6b6a66;
+}
