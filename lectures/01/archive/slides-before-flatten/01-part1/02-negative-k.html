@@ -1,0 +1,249 @@
+<section>
+  <section>
+    <h2>Negative $K$-groups</h2>
+    <p>Bass extended $K$-theory to negative indices:</p>
+    $$K_{-1}(R),\; K_{-2}(R),\; K_{-3}(R),\; \ldots$$
+    <div class="block definition fragment">
+      <div class="block-title">Definition</div>
+      <p>
+        \[K_{-1}(R):= \mathrm{coker}(K_0(R[t]) \oplus K_0(R[t^{- 1}]) \to K_0(R[t, t^{-1}])).\]
+      </p>
+      <p>
+        Recursively define $K_{-n+1}(R)$ from $K_{-n}(R)$.
+      </p>
+    </div>
+    <div class="block theorem fragment">
+      <div class="block-title">Key properties</div>
+      <ol style="text-align: left;">
+        <li>
+          <span style="display: inline-block; position: relative;">
+            <strong>(Bass)</strong> If $R$ is Noetherian and <strong>regular</strong>, then
+            $K_i(R) = 0$ for all $i &lt; 0$.
+            <span class="fragment" style="position: absolute; left: 100%; top: 0; margin-left: 20px; color: #3173ac; font-weight: bold; z-index: 10; line-height: 1.25; width: max-content; display: block;">
+              $\rightsquigarrow$ Negative $K$-groups<br>
+              <span style="padding-left: 1.2em; display: inline-block;">measure singularities</span>
+            </span>
+          </span>
+        </li>
+        <li class="fragment">
+          <strong>(Weibel's conjecture; proved by Kerz&ndash;Strunk&ndash;Tamme)</strong>
+          <p style="text-align: center; margin: 0.3em 0 0;">
+            $K_i(R) = 0$ for all $i &lt; -\dim R$.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section>
+
+    <p class="fragment" style="
+      display: inline-block;
+      font-size: 1.1em;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #1a1a2e;
+      border-left: 4px solid #4a90d9;
+      padding: 0.25em 0.75em;
+      background: linear-gradient(90deg, rgba(74,144,217,0.08) 0%, transparent 100%);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0.5em;
+    ">
+      Dimension 1 — curves
+    </p>
+    <br />
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 1rem; justify-items: center; align-items: center; margin-top: 1rem; width: 100%;">
+      <img class="fragment" src="/k-cusp.jpeg" alt="Cusp singularity" style="width: 100%; margin: 0;" />
+      <img class="fragment" src="/k-node.jpeg" alt="Node singularity" style="width: 100%; margin: 0;" />
+      <img class="fragment" src="/k-triple.jpeg" alt="Triple point singularity" style="width: 100%; margin: 0;" />
+      <img class="fragment" src="/k-snc.jpeg" alt="SNC singularity" style="width: 100%; margin: 0;" />
+    </div>
+    <p class="fragment" style="margin-top: 1rem; text-align: left; font-size: 0.9em;">
+      Follows from Weibel's formula: $K_{-1}(C) = \mathbb{Z}^\lambda$, where $\lambda = \#\text{loops in the dual complex of } C$.
+    </p>
+  </section>
+  <section>
+    <p style="
+      display: inline-block;
+      font-size: 1.1em;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #1a1a2e;
+      border-left: 4px solid #4a90d9;
+      padding: 0.25em 0.75em;
+      background: linear-gradient(90deg, rgba(74,144,217,0.08) 0%, transparent 100%);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0.5em;
+    ">
+      Dimension 2 — surfaces
+    </p>
+    <div class="block theorem fragment" style="padding: 0.45em 1em 0.4em; margin: 0.35rem 0 0.65rem;">
+      <div class="block-title">Fact</div>
+      <p style="margin: 0; font-size: 0.86em; text-align: left;">
+        Let $X=\operatorname{Spec}R$ be a normal surface. Then
+        \[K_{-2}(R) \cong \mathbb{Z}^{\# \text{loops in the dual graph of } E}\]
+        where $E$ is the exceptional divisor of the minimal resolution of $X$.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.55rem; width: 100%;">
+      <div class="fragment" style="border: 1px solid rgba(74,111,165,0.25); border-radius: 8px; padding: 0.5rem 0.65rem 0.45rem; background: rgba(74,111,165,0.035); text-align: center;">
+        <div style="line-height: 1.1;">
+          <strong style="font-size: 0.76em; color: #4a6fa5;">$A_3$ rational double point</strong>
+        </div>
+        <p style="font-size: 0.68em; margin: 0.12rem 0 0;">$xy+z^4=0$</p>
+        <svg viewBox="0 0 320 90" role="img" aria-label="The A3 exceptional divisor and its dual graph" style="display: block; width: 100%; height: 82px; margin: 0.05rem auto 0;">
+          <path d="M160 8 V73" stroke="#c8c3b8" stroke-width="1" stroke-dasharray="3 4" />
+          <g fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round">
+            <line x1="21" y1="42" x2="130" y2="42" />
+            <line x1="43" y1="18" x2="57" y2="67" />
+            <line x1="94" y1="18" x2="108" y2="67" />
+          </g>
+          <g fill="#21212e">
+            <circle cx="49.9" cy="42" r="3" />
+            <circle cx="100.9" cy="42" r="3" />
+          </g>
+          <g stroke="#4a6fa5" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M195 41 H240 M240 41 H285" />
+          </g>
+          <g fill="#fbfaf7" stroke="#4a6fa5" stroke-width="3">
+            <circle cx="195" cy="41" r="8" />
+            <circle cx="240" cy="41" r="8" />
+            <circle cx="285" cy="41" r="8" />
+          </g>
+          <text x="75" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">E</text>
+          <text x="240" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">dual graph</text>
+        </svg>
+        <p style="font-size: 0.76em; font-weight: 600; margin: 0.2rem 0 0; color: #4a6fa5;">$K_{-2}(X)=0$</p>
+      </div>
+
+      <div class="fragment" style="border: 1px solid rgba(74,111,165,0.25); border-radius: 8px; padding: 0.5rem 0.65rem 0.45rem; background: rgba(74,111,165,0.035); text-align: center;">
+        <div style="line-height: 1.1;">
+          <strong style="font-size: 0.76em; color: #4a6fa5;">$D_4$ rational double point</strong>
+        </div>
+        <p style="font-size: 0.68em; margin: 0.12rem 0 0;">$z^2+xy^2+x^3=0$</p>
+        <svg viewBox="0 0 320 90" role="img" aria-label="The D4 exceptional divisor and its dual graph" style="display: block; width: 100%; height: 82px; margin: 0.05rem auto 0;">
+          <path d="M160 8 V73" stroke="#c8c3b8" stroke-width="1" stroke-dasharray="3 4" />
+          <g fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round">
+            <line x1="21" y1="42" x2="130" y2="42" />
+            <line x1="43" y1="18" x2="57" y2="67" />
+            <line x1="68" y1="18" x2="79" y2="67" />
+            <line x1="97" y1="18" x2="106" y2="67" />
+          </g>
+          <g fill="#21212e">
+            <circle cx="49.9" cy="42" r="3" />
+            <circle cx="73.4" cy="42" r="3" />
+            <circle cx="101.4" cy="42" r="3" />
+          </g>
+          <g stroke="#4a6fa5" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M232 41 L195 41 M232 41 L273 21 M232 41 L273 61" />
+          </g>
+          <g fill="#fbfaf7" stroke="#4a6fa5" stroke-width="3">
+            <circle cx="232" cy="41" r="7" />
+            <circle cx="195" cy="41" r="7" />
+            <circle cx="273" cy="21" r="7" />
+            <circle cx="273" cy="61" r="7" />
+          </g>
+          <text x="75" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">E</text>
+          <text x="240" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">dual graph</text>
+        </svg>
+        <p style="font-size: 0.76em; font-weight: 600; margin: 0.2rem 0 0; color: #4a6fa5;">$K_{-2}(X)=0$</p>
+      </div>
+
+      <div class="fragment" style="border: 1px solid rgba(165,28,48,0.25); border-radius: 8px; padding: 0.5rem 0.65rem 0.45rem; background: rgba(165,28,48,0.035); text-align: center;">
+        <div style="line-height: 1.1;">
+          <strong style="font-size: 0.76em; color: #a51c30;">$T_{2,4,5}$ cusp</strong>
+        </div>
+        <p style="font-size: 0.68em; margin: 0.12rem 0 0;">$x^2+y^4+z^5+xyz=0$</p>
+        <svg viewBox="0 0 320 90" role="img" aria-label="The T245 cusp exceptional divisor and its cyclic dual graph" style="display: block; width: 100%; height: 82px; margin: 0.05rem auto 0;">
+          <path d="M160 8 V73" stroke="#c8c3b8" stroke-width="1" stroke-dasharray="3 4" />
+          <path d="M75 17 L111 30 L111 56 L75 69 L39 56 L39 30 Z" fill="none" stroke="#a51c30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          <g fill="#21212e">
+            <circle cx="75" cy="17" r="2.8" /><circle cx="111" cy="30" r="2.8" />
+            <circle cx="111" cy="56" r="2.8" /><circle cx="75" cy="69" r="2.8" />
+            <circle cx="39" cy="56" r="2.8" /><circle cx="39" cy="30" r="2.8" />
+          </g>
+          <path d="M201 43 L218 20 L262 20 L279 43 L262 66 L218 66 Z" fill="none" stroke="#a51c30" stroke-width="3" stroke-linejoin="round" />
+          <g fill="#fbfaf7" stroke="#a51c30" stroke-width="3">
+            <circle cx="201" cy="43" r="5.5" /><circle cx="218" cy="20" r="5.5" />
+            <circle cx="262" cy="20" r="5.5" /><circle cx="279" cy="43" r="5.5" />
+            <circle cx="262" cy="66" r="5.5" /><circle cx="218" cy="66" r="5.5" />
+          </g>
+          <text x="75" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">E</text>
+          <text x="240" y="86" text-anchor="middle" fill="#6b675d" font-size="10" font-style="italic">dual graph</text>
+        </svg>
+        <p style="font-size: 0.76em; font-weight: 600; margin: 0.2rem 0 0; color: #a51c30;">$K_{-2}(X)=\mathbb{Z}$</p>
+      </div>
+    </div>
+    <p class="fragment" style="margin: 1rem 0 0; font-size: 0.95em; text-align: center; color: #1a1a2e;">
+      <strong>Fact:</strong> $K_{-2}=0$ for rational double points.
+    </p>
+  </section>
+  <section>
+    <div class="block theorem">
+      <div class="block-title">Theorem (Srinivas, Weibel)</div>
+      <p>
+        For a normal surface $\operatorname{Spec} R$,
+        \[K_{-1}(R) \cong \bigoplus_{\mathfrak{m}\in R_{\mathrm{sing}}} \operatorname{Cl}(\widehat{R}_\mathfrak{m})/\operatorname{Cl}(R)\]
+      </p>
+    </div>
+    <div class="block example fragment">
+      <div class="block-title">Example: Rational double points</div>
+      <p style="font-size: 0.85em; margin-bottom: 0.5em;">
+        Suppose $k$ has characteristic zero. $R$ has a <em>rational double point</em> if $\widehat{R} \cong k[[x,y,z]]/(f)$ for:
+      </p>
+      <table style="font-size: 0.75em; margin: 0 auto; border-collapse: collapse; text-align: left;">
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(A_n)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^{n+1} + xy$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/(n+1)$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">$(D_n), n \geq 4$</td>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">$f = z^2 + xy^2 + x^{n-1}$</td>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">
+            $\operatorname{Cl}(\widehat{R}) \cong \begin{cases} (\mathbb{Z}/2)^2 & \text{for } n \text{ even,} \\ \mathbb{Z}/4 & \text{for } n \text{ odd.} \end{cases}$
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_6)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + y^3 + x^4$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/3$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_7)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + x^3y + y^3$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/2$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_8)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + x^3 + y^5$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) = 0$</td>
+        </tr>
+      </table>
+      <p style="font-size: 0.85em; margin-top: 0.8em; margin-bottom: 0;">
+        In particular, $K_{-1}(R)$ is torsion in these cases.
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="fragment" style="margin-bottom: 2rem;">
+      <p>
+        Recall that a normal variety $X$ has <strong>rational singularities</strong> if for a resolution of singularities $f: \tilde{X} \to X$, $R^i f_* \mathcal{O}_{\tilde{X}} = 0$ for all $i > 0$.
+      </p>
+    </div>
+    <div class="block theorem fragment">
+      <div class="block-title">Theorem (Artin)</div>
+      <p>
+        For surfaces in $\mathbb{A}^3$,
+        $$\text{rational double points} = \text{rational singularities}.$$
+      </p>
+    </div>
+    <div class="block theorem fragment" style="margin-top: 2rem;">
+      <div class="block-title">Theorem</div>
+      <p>
+        Let $X$ be a complex projective variety of dimension $d \geq 2$. If $X$ has rational singularities, then
+        $$K_{-d}(X) \text{ and } K_{-d+1}(X) \text{ are torsion.}$$
+      </p>
+    </div>
+  </section>
+</section>

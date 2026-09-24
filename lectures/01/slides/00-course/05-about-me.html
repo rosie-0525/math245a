@@ -1,0 +1,41 @@
+<!-- Adapted from the Math 51 "Who am I?" slide: bullets build one per key
+     press while the pictures on the right share one spot, each replaced by
+     the next (outer fade-out fragment wrapping an inner fade-in one). -->
+<section class="course-slide">
+  <h2>About me</h2>
+
+  <div class="about-stage">
+    <ul class="about-list">
+      <li class="fragment" data-fragment-index="1">
+        I recently finished my PhD in <strong>algebraic geometry</strong>
+        under Prof. Mihnea Popa.
+      </li>
+      <li class="fragment" data-fragment-index="2">
+        I study <strong>singularities</strong>, through Hodge theory and
+        algebraic <span class="nw">\(K\)-theory</span>: the topic of this course!
+      </li>
+      <li class="fragment" data-fragment-index="3">
+        I will stay here for one year as a Szegő Assistant Professor.
+      </li>
+      <li class="fragment" data-fragment-index="4">
+        I am a <strong>cat person</strong>.
+      </li>
+    </ul>
+
+    <div class="photo-stack">
+      <div class="photo-slot fragment fade-out" data-fragment-index="4">
+        <figure class="fragment" data-fragment-index="2">
+          <img src="/non-DB-surface.jpeg" alt="The singular surface x² + y³ + z⁷ = 0" />
+          <figcaption>
+            the singular surface \(x^2 + y^3 + z^7 = 0\)
+            <span class="img-credit">Image credit: Gemini-3-pro-image-preview</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <figure class="photo-slot fragment" data-fragment-index="4">
+        <img src="/cats.jpeg" alt="Two cats sitting on a desk" />
+      </figure>
+    </div>
+  </div>
+</section>

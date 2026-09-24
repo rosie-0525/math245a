@@ -1,0 +1,54 @@
+<section class="title-slide" data-transition="fade">
+  <div class="title-decor" aria-hidden="true">
+    <svg viewBox="0 0 960 700">
+      <defs>
+        <linearGradient id="decor-node-stroke" gradientUnits="userSpaceOnUse" x1="0" y1="-343" x2="0" y2="343">
+          <stop offset="0%" stop-color="#a51c30" stop-opacity="0" />
+          <stop offset="32%" stop-color="#a51c30" stop-opacity="1" />
+          <stop offset="68%" stop-color="#a51c30" stop-opacity="1" />
+          <stop offset="100%" stop-color="#a51c30" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="decor-cusp-stroke" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="336" y2="0">
+          <stop offset="0%" stop-color="#4a6fa5" stop-opacity="1" />
+          <stop offset="55%" stop-color="#4a6fa5" stop-opacity="1" />
+          <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+
+      <!-- Drawing shifted +350px: the svg box hangs above the slide midline
+           (see .title-decor) so the picture must be drawn one half-height
+           lower to land on the slide. -->
+      <g transform="translate(0 350)">
+
+      <!-- nodal cubic y² = x²(x+1), node marked at the origin -->
+      <g transform="translate(170 560) rotate(170)" opacity="0.1">
+        <path
+          fill="none"
+          stroke="url(#decor-node-stroke)"
+          stroke-width="2.5"
+          d="M 309.4 -342.9 C 265.6 -278.1, 225.0 -223.6, 187.5 -178.1 C 150.0 -132.6, 115.6 -96.0, 84.4 -66.8 C 53.1 -37.6, 25.0 -15.8, 0.0 0.0 C -25.0 15.8, -46.9 25.7, -65.6 31.2 C -84.4 36.6, -100.0 37.6, -112.5 35.6 C -125.0 33.6, -134.4 28.7, -140.6 22.3 C -146.9 15.8, -150.0 7.9, -150.0 0.0 C -150.0 -7.9, -146.9 -15.8, -140.6 -22.3 C -134.4 -28.7, -125.0 -33.6, -112.5 -35.6 C -100.0 -37.6, -84.4 -36.6, -65.6 -31.2 C -46.9 -25.7, -25.0 -15.8, 0.0 0.0 C 25.0 15.8, 53.1 37.6, 84.4 66.8 C 115.6 96.0, 150.0 132.6, 187.5 178.1 C 225.0 223.6, 265.6 278.1, 309.4 342.9" />
+      </g>
+      <circle cx="170" cy="560" r="3.5" fill="#a51c30" opacity="0.35" />
+
+      <!-- cusp y² = x³, cusp point marked at the origin -->
+      <g transform="translate(785 180) rotate(-25)" opacity="0.09">
+        <path
+          fill="none"
+          stroke="url(#decor-cusp-stroke)"
+          stroke-width="2.5"
+          d="M 336.4 -259.1 C 299.0 -215.9, 264.8 -180.0, 233.6 -150.0 C 202.5 -120.0, 174.4 -96.0, 149.5 -76.8 C 124.6 -57.6, 102.8 -43.2, 84.1 -32.4 C 65.4 -21.6, 49.8 -14.4, 37.4 -9.6 C 24.9 -4.8, 15.6 -2.4, 9.3 -1.2 C 3.1 -0.0, 0.0 -0.0, 0.0 -0.0 C 0.0 0.0, 3.1 0.0, 9.3 1.2 C 15.6 2.4, 24.9 4.8, 37.4 9.6 C 49.8 14.4, 65.4 21.6, 84.1 32.4 C 102.8 43.2, 124.6 57.6, 149.5 76.8 C 174.4 96.0, 202.5 120.0, 233.6 150.0 C 264.8 180.0, 299.0 215.9, 336.4 259.1" />
+      </g>
+      <circle cx="785" cy="180" r="3.5" fill="#4a6fa5" opacity="0.3" />
+
+      </g>
+    </svg>
+  </div>
+
+  <h1>Higher singularities and \(K\)-theory</h1>
+
+  <hr class="title-rule" />
+
+  <p class="author">Wanchun Shen</p>
+  <p class="joint">joint work with Andrew Burke and Mihnea Popa</p>
+  <p class="date">July 2026</p>
+</section>

@@ -1,0 +1,92 @@
+  <section style="height: 100%; overflow-y: auto;">
+    <h2>When is a variety $K_m$-regular?</h2>
+    <div class="block theorem">
+      <div class="block-title">Theorem</div>
+      <p>
+        Let $X = (f(x_1, \ldots, x_n) = 0)\subset \mathbb{C}^n$ be a
+        hypersurface with isolated singularities. Then
+      </p>
+      <div class="fragment">
+        $$X \text{ is } K_m\text{-regular} \iff \tilde{\alpha}_f \ge \left\lceil{\frac{m+n-1}{2}}\right\rceil,$$
+      </div>
+      <div class="fragment" style="display: flex; align-items: center; gap: 0.8rem;">
+        <p style="margin: 0; flex: 0 0 auto;">
+          where $\tilde{\alpha}_f$ is the
+          <strong>minimal exponent</strong> of $f$.
+        </p>
+        <svg viewBox="0 0 70 20" width="70" height="20" aria-hidden="true" style="flex: 0 0 auto; color: #3173ac;">
+          <line x1="68" y1="10" x2="4" y2="10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <polyline points="13,3 3,10 13,17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span style="color: #3173ac; font-weight: bold; font-size: 0.8em; line-height: 1.25;">
+          A $D$-module theoretic invariant<br />related to Hodge theory
+        </span>
+      </div>
+    </div>
+    <div class="fragment" style="margin-top: 1em;">
+      <div class="sage-cell">
+        <script type="text/x-sage">
+singular.eval('LIB "bfun.lib";')
+singular.eval('ring r = 0,(x,y,z),dp;')
+singular.eval('poly f =;')
+singular.eval('list L = bfct(f);')
+print(singular.eval('L;'))
+print("minimal exponent of f: " + singular.eval('-L[1][1];'))
+        </script>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="block example">
+        <div class="block-title">Example</div>
+        <p>
+          Let $f = x^2+y^3+z^7$. Then
+          $\tilde{\alpha}_f = \tfrac{1}{2}+\tfrac{1}{3}+\tfrac{1}{7} = \tfrac{41}{42} < 1$.
+        </p>
+      </div>
+    </div>
+    <div class="fragment">
+      <p>
+        By the theorem, $R$ is
+        $K_m$-regular
+        iff $\tilde{\alpha}_f \geq \lceil \tfrac{m+2}{2} \rceil$:
+      </p>
+      <table class="k-reg-table">
+        <thead>
+          <tr>
+            <th>$m$</th>
+            <th>$\lceil \tfrac{m+2}{2} \rceil$</th>
+            <th>$K_m$-regular?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$-2$</td>
+            <td>$0$</td>
+            <td class="check">&#10003;</td>
+          </tr>
+          <tr>
+            <td>$-1$</td>
+            <td>$1$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$0$</td>
+            <td>$1$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$1$</td>
+            <td>$2$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$2$</td>
+            <td>$2$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>

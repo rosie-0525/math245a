@@ -1,0 +1,82 @@
+  <section>
+    <h2>$\mathbb{A}^1$-invariance <span class="fragment fade-left" data-fragment-index="4" style="font-size: 0.65em; font-weight: bold; color: #3173ac;">$\leftrightsquigarrow$ $K$-theory behaves like a homotopy theory</span></h2>
+    <div class="block theorem">
+      <div class="block-title">Theorem (Quillen)</div>
+      <p>If $X$ is a Notherian <strong>regular</strong> scheme, then</p>
+      $$K_m(X)\cong K_m(X\times \mathbb{A}^1) \quad \text{for all } m \in \mathbb{Z}.$$
+    </div>
+    <table class="fragment" data-fragment-index="1" style="margin: 1em auto; border-collapse: collapse; width: 80%;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--r-main-color);">
+          <th style="padding: 0.5em; text-align: center;">$\mathbb{A}^1$-homotopy theory</th>
+          <th style="padding: 0.5em; text-align: center;">Classical topology</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+          <td style="padding: 0.5em; text-align: center;"><div class="fragment" data-fragment-index="2">Affine line $\mathbb{A}^1$</div></td>
+          <td style="padding: 0.5em; text-align: center;"><div class="fragment" data-fragment-index="2">Unit Interval $[0,1]$</div></td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5em; text-align: center;"><div class="fragment" data-fragment-index="3">$X \times \mathbb{A}^1$</div></td>
+          <td style="padding: 0.5em; text-align: center;"><div class="fragment" data-fragment-index="3"><img src="/cylinder.png" alt="Cylinder over X" style="height: 100px; margin: 0; border: none; box-shadow: none; background: transparent;"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <p class="transition-text">This fails for singular varieties:</p>
+    <div class="fragment">
+      <div class="block example">
+        <div class="block-title">Example (Bloch&ndash;Murthy, Weibel)</div>
+        <p>
+          Let $X=(x^2+y^3+z^7=0)\subset \mathbb{C}^3$. Then
+          $$K_0(X)\not\cong K_0(X\times \mathbb{A}^1).$$
+        </p>
+      </div>
+    </div>
+    <div class="fragment">
+      <div class="block example">
+        <div class="block-title">Example (Weibel)</div>
+        <p>
+          Let $X=(x^2+y^3+z^7=0)\subset \mathbb{C}^3$. Then
+          $$K_{-1}(X) \not\cong K_{-1}(X \times \mathbb{A}^1).$$
+        </p>
+        <div class="fragment">
+          <p>
+            However,
+            $$K_{-2}(X) \cong K_{-2}(X \times \mathbb{A}^r),\quad \forall\, r\ge 0.$$
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+      <div style="position: relative; display: inline-block;">
+        <img
+          src="/non-DB-surface.jpeg"
+          alt="The singular surface x² + y³ + z⁷ = 0"
+          style="max-height: 500px; width: auto; display: block; margin: 0 auto;"
+        />
+        <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.4em; color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.2); padding: 2px 4px; border-radius: 3px; line-height: 1;">
+          Image credit: Gemini-3-pro-image-preview
+        </div>
+      </div>
+      <p style="font-size: 1.2em; margin-bottom: 0.5em;">The surface $x^2 + y^3 + z^7 = 0$</p>
+    </div>
+  </section>
+  <section>
+    <div class="block theorem">
+      <div class="block-title">Conjecture (Vorst)</div>
+      <p>
+        If $X$ is an affine scheme, then
+        $$\mathbb{A}^1\text{-invariance of } K_n(X) \text{ for all } n \implies X \text{ is regular.}$$
+      </p>
+    </div>
+    <p class="fragment">
+      Known for varieties over <strong>perfect fields</strong> by
+      Corti&ntilde;as&ndash;Haesemeyer&ndash;Weibel and
+      Kerz&ndash;Strunk&ndash;Tamme.
+    </p>
+  </section>

@@ -1,0 +1,198 @@
+ <section>
+  <section>
+    <h2>Higher singularities for local complete intersections</h2>
+    Let $X$ be a complex algebraic variety. <br>
+    <div style="display: flex; align-items: center; justify-content: space-around; margin: 1.5em 0; font-size: 1.2em;">
+      
+      <div style="font-weight: bold; font-size: 0.9em;">
+        Differential forms on<br>singular spaces:
+      </div>
+      <div class="fragment" style="text-align: center;">
+        $\Omega_X^p$<br>
+        <span style="font-size: 0.8em; color: #666;">Kähler differentials</span>
+      </div>
+      <div class="fragment" style="text-align: center;">
+        $\underline{\Omega}_X^p$<br>
+        <span style="font-size: 0.8em; color: #666;">Du Bois complexes</span>
+      </div>
+    </div>
+
+    <div class="block definition fragment">
+      <div class="block-title">Definition (Mustață-Olano-Popa-Witaszek, Jung-Kim-Saito-Yoon)</div>
+      <p>
+        Let $X$ be a local complete intersection.
+        We say $X$ is
+        <strong>$m$-Du Bois</strong> if
+      </p>
+      $$\Omega^p_X \to \underline{\Omega}^p_X \text{ is a quasi-isomorphism for all } p \leq m.$$
+    </div>
+    <div class="fragment">
+      <div class="block definition">
+        <div class="block-title">Definition (Friedman-Laza)</div>
+        <p>
+          We say $X$ is
+          <strong>$m$-rational</strong> if
+        </p>
+        $$
+          \Omega^p_X \to \mathbf{R}\mathcal{H}om(\underline{\Omega}_X^{n-p}, \omega_X^\bullet)[-n]
+          \text{ is a quasi-isomorphism for all } p \leq m,
+        $$
+        where $n=\dim X$.
+      </div>
+    </div>
+  </section>
+  <section>
+    
+    <div class="block theorem">
+    <div class="block-title">Theorem (Mustață-Olano-Popa-Witaszek, Jung-Kim-Saito-Yoon, Mustață-Popa, Saito, Chen-Dirks-Mustață-Olano)</div>
+    <p>
+      Suppose $X$ is a local complete intersection of
+      codimension $r$. Then
+    $$X \text{ is } m\text{-Du Bois} \iff \tilde{\alpha}_X \geq m + r$$
+    $$X \text{ is } m\text{-rational} \iff \tilde{\alpha}_X > m + r$$
+    where $\tilde{\alpha}_X$ is the minimal exponent of $X$.
+    </p>
+  </div>
+  </section>
+  <section>
+    <div style="position: relative; width: 1100px; height: 500px; margin: 0 auto; font-size: 1.0em; white-space: nowrap;">
+      <!-- DB row -->
+      <div style="position: absolute; left: 50px; top: 100px; transform: translate(-50%, -50%);">$0\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 140px; top: 100px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 230px; top: 100px; transform: translate(-50%, -50%);">$1\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 320px; top: 100px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 410px; top: 100px; transform: translate(-50%, -50%);">$2\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 500px; top: 100px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 590px; top: 100px; transform: translate(-50%, -50%);">$3\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 680px; top: 100px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 770px; top: 100px; transform: translate(-50%, -50%);">$\dots$</div>
+      <div style="position: absolute; left: 860px; top: 100px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 970px; top: 100px; transform: translate(-50%, -50%);">$\lceil \frac{n}{2} \rceil\text{-Du Bois}$</div>
+
+      <!-- rat row -->
+      <div style="position: absolute; left: 50px; top: 250px; transform: translate(-50%, -50%);">$0\text{-rational}$</div>
+      <div style="position: absolute; left: 140px; top: 250px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 230px; top: 250px; transform: translate(-50%, -50%);">$1\text{-rational}$</div>
+      <div style="position: absolute; left: 320px; top: 250px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 410px; top: 250px; transform: translate(-50%, -50%);">$2\text{-rational}$</div>
+      <div style="position: absolute; left: 500px; top: 250px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 590px; top: 250px; transform: translate(-50%, -50%);">$3\text{-rational}$</div>
+      <div style="position: absolute; left: 680px; top: 250px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 770px; top: 250px; transform: translate(-50%, -50%);">$\dots$</div>
+      <div style="position: absolute; left: 860px; top: 250px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 970px; top: 250px; transform: translate(-50%, -50%);">$\lceil \frac{n}{2} \rceil\text{-rational}$</div>
+
+      <!-- Vertical equals and smooth -->
+      <div class="fragment" data-fragment-index="4">
+        <!-- smooth -->
+        <div style="position: absolute; left: 970px; top: 400px; transform: translate(-50%, -50%);">smooth</div>
+        <div style="position: absolute; left: 970px; top: 175px; transform: translate(-50%, -50%); color: #cc3333;">$\Vert$</div>
+        <div style="position: absolute; left: 970px; top: 325px; transform: translate(-50%, -50%); color: #cc3333;">$\Vert$</div>
+      </div>
+
+      <!-- Diagonal green arrows (k-DB to (k-1)-rat) -->
+      <div class="fragment" data-fragment-index="3">
+        <!-- 1-DB to 0-rat: mid is (140, 175) -->
+        <div style="position: absolute; left: 140px; top: 175px; transform: translate(-50%, -50%) rotate(-40deg); color: #77ab59;">$\impliedby$</div>
+        <!-- 2-DB to 1-rat: mid is (320, 175) -->
+        <div style="position: absolute; left: 320px; top: 175px; transform: translate(-50%, -50%) rotate(-40deg); color: #77ab59;">$\impliedby$</div>
+        <!-- 3-DB to 2-rat: mid is (500, 175) -->
+        <div style="position: absolute; left: 500px; top: 175px; transform: translate(-50%, -50%) rotate(-40deg); color: #77ab59;">$\impliedby$</div>
+        <!-- dots to 3-rat: mid is (680, 175) -->
+        <div style="position: absolute; left: 680px; top: 175px; transform: translate(-50%, -50%) rotate(-40deg); color: #77ab59;">$\impliedby$</div>
+      </div>
+
+      <!-- Vertical red arrows (k-rat to k-DB) -->
+      <!-- Leftmost arrow (0-rat to 0-DB) -->
+      <div class="fragment" data-fragment-index="1">
+        <div style="position: absolute; left: 50px; top: 175px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+        <div style="position: absolute; left: 30px; top: 175px; transform: translate(-100%, -50%); color: #cc3333; font-size: 0.6em; text-align: right; line-height: 1.2;">
+          Kovács'99<br>Saito'00
+        </div>
+      </div>
+
+      <!-- Other vertical arrows -->
+      <div class="fragment" data-fragment-index="2">
+        <div style="position: absolute; left: 230px; top: 175px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+        <div style="position: absolute; left: 410px; top: 175px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+        <div style="position: absolute; left: 590px; top: 175px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+      </div>
+    </div>
+  </section>
+   <section>
+    <svg viewBox="0 0 1000 500" width="100%" height="600px">
+      <style>
+        .blue { stroke: #00008B; fill: none; stroke-width: 2; }
+        .red { stroke: #8B0000; fill: none; stroke-width: 2; }
+        .blue-text { fill: #00008B; font-family: sans-serif; font-size: 24px; }
+        .red-text { fill: #8B0000; font-family: sans-serif; font-size: 24px; }
+        .orange-text { fill: #D2691E; font-family: sans-serif; font-size: 20px; }
+        .dot { fill: #D2691E; }
+      </style>
+
+      <!-- Ellipses -->
+      <g class="fragment" data-fragment-index="1">
+        <ellipse cx="500" cy="250" rx="450" ry="220" class="blue" />
+        <text x="250" y="100" class="blue-text">DB</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="2">
+        <ellipse cx="520" cy="250" rx="300" ry="160" class="red" />
+        <text x="380" y="140" class="red-text">rat</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="3">
+        <ellipse cx="570" cy="250" rx="200" ry="100" class="blue" />
+        <text x="500" y="180" class="blue-text">1-DB</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="4">
+        <ellipse cx="640" cy="250" rx="80" ry="55" class="red" />
+        <text x="630" y="220" class="red-text">1-rat</text>
+        <text x="610" y="255" class="blue-text">...</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="5">
+        <ellipse cx="680" cy="250" rx="35" ry="25" class="blue" />
+        <text x="665" y="255" class="blue-text">sm</text>
+      </g>
+
+      <!-- Orange Dots and Texts -->
+      <g class="fragment" data-fragment-index="6">
+        <circle cx="880" cy="100" r="4" class="dot" />
+        <text x="830" y="90" class="orange-text">cuspidal cubic</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="7">
+        <circle cx="200" cy="280" r="4" class="dot" />
+        <text x="60" y="270" class="orange-text">cones over CY</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="8">
+        <circle cx="850" cy="210" r="4" class="dot" />
+        <text x="830" y="190" class="orange-text">nodal</text>
+        <text x="830" y="235" class="orange-text">cubic</text>
+      </g>
+
+      <g class="fragment" data-fragment-index="9">
+        <circle cx="350" cy="200" r="4" class="dot" />
+        <text x="250" y="180" class="orange-text">hypersurface</text>
+        <text x="250" y="205" class="orange-text">toric variety</text>
+      </g>
+      
+      <g class="fragment" data-fragment-index="10">
+        <circle cx="450" cy="380" r="4" class="dot" />
+        <text x="390" y="370" class="orange-text">cones over Fano</text>
+      </g>
+
+      <g class="fragment" data-fragment-index="11">
+        <circle cx="480" cy="250" r="4" class="dot" />
+        <text x="390" y="230" class="orange-text">determinantal</text>
+        <text x="390" y="275" class="orange-text">hypersurface</text>
+      </g>
+    </svg>
+    <div style="position: absolute; bottom: 10px; right: 10px; font-size: 0.5em; color: #666;">image credit - Anh Duc Vo</div>
+  </section>
+  
+
+</section>

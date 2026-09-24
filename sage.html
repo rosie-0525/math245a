@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedded SageMath Cell</title>
+    
+    <!-- 1. Load the SageMathCell script and CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <!-- 2. Initialize the cell by selecting target HTML elements -->
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            sagecell.makeSagecell({
+                inputLocation: '.sage-cell',
+                languages: ['sage'],
+                evalButtonText: 'Calculate'
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>My First Interactive Math Page</h1>
+    <p>Modify the matrix below and click Calculate:</p>
+
+    <!-- 3. Define your interactive cell container -->
+    <div class="sage-cell">
+        <script type="text/x-sage">
+A = matrix([[1, 2], [3, 4]])
+print("Matrix A:")
+show(A)
+print("Inverse of A:")
+show(A^-1)
+        </script>
+    </div>
+
+</body>
+</html>

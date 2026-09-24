@@ -1,30 +1,34 @@
 # Math 245A: Topics in algebraic geometry
 
-Course page and lecture slides for Math 245A (Stanford), taught by Wanchun Shen.
-
-Served by GitHub Pages at https://rosie-0525.github.io/math245a/.
+Hodge Theory and Algebraic K-Theory, Stanford, Autumn 2026. Course page and lecture slides, served by GitHub Pages at https://rosie-0525.github.io/math245a/.
 
 ## Layout
 
-- `index.html`: the course page (general info and the list of lectures). It uses the stylesheet of the personal website.
-- `slides/NN.html`: one [reveal.js](https://revealjs.com) deck per lecture. Images go in `slides/figures/`.
-- `slides/_template.html`: a blank deck to copy for each new lecture.
-- `theme.css`: slide styles (Newsreader font, site colours, definition/theorem boxes).
-- `reveal/`, `katex/`, `fonts/`: bundled copies of reveal.js 6.0.2, KaTeX 0.16.22 and Newsreader, so the slides work offline.
+- `index.html`: the course page (info, lecture list, course plan, references). It uses the personal website's stylesheet.
+- `lectures/NN/`: one [reveal.js](https://revealjs.com) deck per lecture.
+  - `slides/`: the slides, one `<section>` per file, shown in order of their file paths. Subfolders such as `01-part1/` are fine.
+  - `index.html` and `main.js`: the page that loads them. These are the same for every lecture apart from the title.
+  - `archive/`: slides that were cut (optional; not shown).
+- `lectures/_template/`: a blank lecture to copy.
+- `src/deck.js`: shared reveal.js setup (KaTeX math, SageMathCell). `src/custom.css`: shared styles.
+- `public/`: images for all lectures. Reference them as `src="/name.png"`.
+- `syllabus.md`: source text for the course page and the first lecture.
+- `sage.html`: a standalone SageMathCell example (not part of the site).
 
 ## Adding a lecture
 
-1. Copy `slides/_template.html` to `slides/NN.html` and write the slides.
-2. Add a line for it under "Lectures" in `index.html`.
-3. Commit and push.
+1. Copy `lectures/_template` to `lectures/NN` (e.g. `02`) and change the `<title>` in its `index.html`.
+2. Write slides in `lectures/NN/slides/`.
+3. Add a line for it under "Lectures" in `index.html`.
+4. Commit and push. The GitHub Action builds and publishes the site.
 
-## Writing slides
+No build configuration needs to change: `vite.config.js` picks up every folder in `lectures/` except `_template`.
 
-- Each `<section>` is one slide.
-- Math: `$…$` inline, `$$…$$` displayed (KaTeX). Write `&lt;` and `&gt;` for `<` and `>`.
-- Boxes: `<div class="defn">`, `<div class="thm">`, `<div class="ex">`.
-- `class="fragment"` reveals an element on the next click.
-- `<aside class="notes">` holds speaker notes. Press `S` during a talk to open the speaker view.
-- Other keys: `F` for full screen, `Esc` for the slide overview.
+## Working locally
 
-The slides open directly from disk (double-click the file); no server is needed.
+```bash
+npm install
+npm run dev       # http://localhost:5173/ (course page); lectures at /lectures/NN/
+npm run build     # writes dist/, as deployed
+npm run preview   # serves dist/ at http://localhost:4173/math245a/
+```

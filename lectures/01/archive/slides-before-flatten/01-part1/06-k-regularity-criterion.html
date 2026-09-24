@@ -1,0 +1,124 @@
+<section>
+  <section style="height: 100%; overflow-y: auto;">
+    <h2>When is a variety $K_m$-regular?</h2>
+    <div class="block theorem">
+      <div class="block-title">Theorem</div>
+      <p>
+        Let $X = (f(x_1, \ldots, x_n) = 0)\subset \mathbb{C}^n$ be a
+        hypersurface with isolated singularities. Then
+      </p>
+      <div class="fragment">
+        $$X \text{ is } K_m\text{-regular} \iff \tilde{\alpha}_f \ge \left\lceil{\frac{m+n-1}{2}}\right\rceil,$$
+      </div>
+      <p class="fragment">
+        where $\tilde{\alpha}_f$ is the
+        <strong>minimal exponent</strong> of $f$.
+      </p>
+    </div>
+    <div class="fragment" style="margin-top: 1em;">
+      <div class="sage-cell">
+        <script type="text/x-sage">
+singular.eval('LIB "bfun.lib";')
+singular.eval('ring r = 0,(x,y,z),dp;')
+singular.eval('poly f =;')
+singular.eval('list L = bfct(f);')
+print(singular.eval('L;'))
+print("minimal exponent of f: " + singular.eval('-L[1][1];'))
+        </script>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="block example">
+        <div class="block-title">Example</div>
+        <p>
+          Let $f = x^2+y^3+z^7$. Then
+          $\tilde{\alpha}_f = \tfrac{1}{2}+\tfrac{1}{3}+\tfrac{1}{7} = \tfrac{41}{42} < 1$.
+        </p>
+      </div>
+    </div>
+    <div class="fragment">
+      <p>
+        By the theorem, $R$ is
+        $K_m$-regular
+        iff $\tilde{\alpha}_f \geq \lceil \tfrac{m+2}{2} \rceil$:
+      </p>
+      <table class="k-reg-table">
+        <thead>
+          <tr>
+            <th>$m$</th>
+            <th>$\lceil \tfrac{m+2}{2} \rceil$</th>
+            <th>$K_m$-regular?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$-2$</td>
+            <td>$0$</td>
+            <td class="check">&#10003;</td>
+          </tr>
+          <tr>
+            <td>$-1$</td>
+            <td>$1$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$0$</td>
+            <td>$1$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$1$</td>
+            <td>$2$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+          <tr>
+            <td>$2$</td>
+            <td>$2$</td>
+            <td class="cross">&#10007;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section>
+    <div class="block theorem">
+      <div class="block-title">Corollary</div>
+      <p>
+        For a complex hypersurface $X$ of dimension $d$ with isolated singularities, we have:
+      </p>
+      <ul>
+        <li>
+          $X$ is $K_{-d}$-regular
+          <span class="fragment" data-fragment-index="3" style="color: #4a6fa5;">(Holds in general by Cortiñas&ndash;Haesemeyer&ndash;Schlichting&ndash;Weibel and Kerz&ndash;Strunk&ndash;Tamme)</span>
+        </li>
+        <li class="fragment" data-fragment-index="1">
+          $K_{-d+1}\text{-regular} \iff K_{-d+2}\text{-regular}$
+        </li>
+        <li class="fragment" data-fragment-index="2">
+          $K_{-d+3}\text{-regular} \iff K_{-d+4}\text{-regular}$
+          <br>
+          $\cdots$
+        </li>
+        
+      </ul>
+    </div>
+    <div class="fragment">
+      <div class="block question">
+        <div class="block-title">Remark</div>
+        <p>This fails for:</p>
+        <ul>
+          <li class="fragment">
+            <strong>Non-isolated singularities:</strong><br>
+            $X = (xyzwu=0) \subset \mathbb{C}^5$ is $K_1$-regular but not $K_2$-regular.
+          </li>
+          <li class="fragment">
+            <strong>Non-hypersurfaces:</strong><br>
+            Cone over $C \times \mathbb{P}^1$ (for $C$ a genus $g$ curve, in sufficiently ample embeddings) is $K_{-2}$-regular but not $K_{-1}$-regular.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,77 @@
+  <section>
+    <h2>Algebraic $K$-groups</h2>
+    <p style="text-align: center; margin-bottom: 0.2rem;">
+      $$\text{ring } R \;\longmapsto\; \text{abelian groups } K_n(R),\quad n \in \mathbb{Z}$$
+    </p>
+    <div class="two-col">
+      <div class="two-col-main">
+        <dl class="k-group-dl">
+          <div class="k-group-entry fragment" data-fragment-index="0" style="padding-top: 1.75em;">
+            <dt>$K_0$</dt>
+            <dd>
+              <span class="k-attr">(Grothendieck)</span>
+              vector bundles on $\operatorname{Spec} R$
+            </dd>
+          </div>
+          <div class="k-group-entry fragment" data-fragment-index="1">
+            <dt>$K_1$</dt>
+            <dd>
+              <span class="k-attr">(Whitehead)</span>
+              automorphisms of vector bundles
+            </dd>
+          </div>
+          <div class="k-group-entry fragment" data-fragment-index="2">
+            <dt>$K_2$</dt>
+            <dd>
+              <span class="k-attr">(Milnor)</span>
+              relations among automorphisms
+            </dd>
+          </div>
+          <div class="k-group-entry fragment" data-fragment-index="3">
+            <dt>$K_3, K_4, \ldots$</dt>
+            <dd>
+              <span class="k-attr">(Quillen)</span>
+              "higher" structures
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="two-col-side fragment" data-fragment-index="0">
+        <div style="position: relative; display: inline-block;">
+          <img src="/vector-bundle.jpeg"
+               alt="A vector bundle projecting onto its base space"
+               class="surface-image" />
+          <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.4em; color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.2); padding: 2px 4px; border-radius: 3px; line-height: 1;">
+            Image credit: Gemini-3-pro-image-preview
+          </div>
+        </div>
+        <p class="image-caption">A vector bundle over $\operatorname{Spec} R$</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="height: 100%; overflow-y: auto;">
+    <div class="block definition">
+      <div class="block-title">$K_0$ (Grothendieck group)</div>
+      For finitely generated projective $R$-modules $P, Q$:
+      $$K_0(R) \;=\; \text{formal linear combinations of } [P] \;\Big/\; \langle [P] + [Q] = [P \oplus Q] \rangle$$
+    </div>
+    <div class="block definition fragment">
+      <div class="block-title">$K_1$ (Whitehead group)</div>
+      Let $GL(R) = \varinjlim\, GL_n(R)$ and $E(R) \trianglelefteq GL(R)$ the
+      subgroup of elementary matrices. By the Whitehead lemma,
+      $$K_1(R) \;=\; GL(R)\,/\,E(R) \;=\; GL(R)^{\mathrm{ab}}.$$
+    </div>
+    <div class="block definition fragment">
+      <div class="block-title">$K_2$ (Milnor)</div>
+      $E(R)$ is perfect, so it has a universal central extension by the
+      Steinberg group $\operatorname{St}(R)$:
+      $$K_2(R) \;=\; \ker\!\bigl(\operatorname{St}(R) \twoheadrightarrow E(R)\bigr) \;=\; H_2\!\bigl(E(R),\;\mathbb{Z}\bigr).$$
+    </div>
+    <div class="block definition fragment">
+      <div class="block-title">$K_n$, $n \geq 1$ (Quillen's $+$ construction)</div>
+      Apply the plus construction to $BGL(R)$ with respect to $E(R)$:
+      $$K_n(R) \;=\; \pi_n\!\bigl(BGL(R)^+\bigr).$$
+      This recovers $K_1 = \pi_1$ and $K_2 = \pi_2$ and extends uniformly.
+    </div>
+  </section>

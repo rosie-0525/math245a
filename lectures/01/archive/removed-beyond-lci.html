@@ -1,0 +1,163 @@
+  <section>
+    <h2>Beyond local complete intersections</h2>
+    <p>
+      The conditions $\Omega_X^1 \to \underline{\Omega}_X^1$ is very restrictive!
+    </p>
+    <div class="block definition">
+      <div class="block-title">Definition (S.-Venkatesh-Vo)</div>
+      <p>
+        $X$ is <strong>pre-$m$-Du Bois</strong> if $\mathcal{H}^i(\underline{\Omega}^p_X) = 0$ for all $p \leq m$ and $i > 0$.
+      </p>
+      <p>
+        $X$ is <strong>pre-$m$-rational</strong> if
+        $\mathcal{E}xt^{i-n}(\underline{\Omega}_X^{n-p}, \omega_X^\bullet)$
+        is a quasi-isomorphism for all $p \leq m$ and $i>0$, where $n=\dim X$.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="block theorem">
+      <div class="block-title">Theorem (S.-Venkatesh-Vo)</div>
+      <p>
+        If $X$ is normal, then
+        \[
+          \text{pre-}m\text{-rational} \implies \text{pre-}m\text{-Du Bois}.
+        \]
+        However, $\text{pre-}m\text{-rational}$ does not imply $\text{pre-}(m-1)\text{-rational}$.
+      </p>
+    </div>
+    <div class="block remark fragment">
+      <div class="block-title">Remark</div>
+      <p>
+        Imposing more conditions gives definition of $m$-Du Bois and $m$-rational singularities that:
+      </p>
+      <ul>
+        <li>agrees with the notions in the literature when $m=0$, or when $X$ is lci;</li>
+        <li>include more examples in general.</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div style="position: relative; width: 1000px; height: 400px; margin: 0 auto; font-size: 0.75em; white-space: nowrap;">
+      <!-- DB row -->
+      <div style="position: absolute; left: 50px; top: 80px; transform: translate(-50%, -50%);">$\text{pre-}0\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 150px; top: 80px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 250px; top: 80px; transform: translate(-50%, -50%);">$\text{pre-}1\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 350px; top: 80px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 450px; top: 80px; transform: translate(-50%, -50%);">$\text{pre-}2\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 550px; top: 80px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 650px; top: 80px; transform: translate(-50%, -50%);">$\text{pre-}3\text{-Du Bois}$</div>
+      <div style="position: absolute; left: 730px; top: 80px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 810px; top: 80px; transform: translate(-50%, -50%);">$\dots$</div>
+      <div style="position: absolute; left: 890px; top: 80px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 970px; top: 80px; transform: translate(-50%, -50%);">$\text{pre-}n\text{-Du Bois}$</div>
+
+      <!-- rat row -->
+      <div style="position: absolute; left: 50px; top: 240px; transform: translate(-50%, -50%);">$\text{pre-}0\text{-rational}$</div>
+      <div style="position: absolute; left: 150px; top: 240px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 250px; top: 240px; transform: translate(-50%, -50%);">$\text{pre-}1\text{-rational}$</div>
+      <div style="position: absolute; left: 350px; top: 240px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 450px; top: 240px; transform: translate(-50%, -50%);">$\text{pre-}2\text{-rational}$</div>
+      <div style="position: absolute; left: 550px; top: 240px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 650px; top: 240px; transform: translate(-50%, -50%);">$\text{pre-}3\text{-rational}$</div>
+      <div style="position: absolute; left: 730px; top: 240px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 810px; top: 240px; transform: translate(-50%, -50%);">$\dots$</div>
+      <div style="position: absolute; left: 890px; top: 240px; transform: translate(-50%, -50%);">$\impliedby$</div>
+      <div style="position: absolute; left: 970px; top: 240px; transform: translate(-50%, -50%);">$\text{pre-}n\text{-rational}$</div>
+
+      <!-- Vertical arrows and smooth -->
+      <div class="fragment" data-fragment-index="1">
+        <div style="position: absolute; left: 970px; top: 160px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+      </div>
+
+      <!-- Diagonal green arrows (k-DB to (k-1)-rat) -->
+      <div class="fragment" data-fragment-index="2">
+        <!-- 1-DB to 0-rat: mid is (150, 160) -->
+        <div style="position: absolute; left: 150px; top: 160px; transform: translate(-50%, -50%) rotate(135deg); color: #77ab59;">$\not\Longrightarrow$</div>
+        <!-- 2-DB to 1-rat: mid is (350, 160) -->
+        <div style="position: absolute; left: 350px; top: 160px; transform: translate(-50%, -50%) rotate(135deg); color: #77ab59;">$\not\Longrightarrow$</div>
+        <!-- 3-DB to 2-rat: mid is (550, 160) -->
+        <div style="position: absolute; left: 550px; top: 160px; transform: translate(-50%, -50%) rotate(135deg); color: #77ab59;">$\not\Longrightarrow$</div>
+        <!-- dots to 3-rat: mid is (730, 160) -->
+        <div style="position: absolute; left: 730px; top: 160px; transform: translate(-50%, -50%) rotate(135deg); color: #77ab59;">$\not\Longrightarrow$</div>
+      </div>
+
+      <!-- Vertical red arrows (k-rat to k-DB) -->
+      <!-- Leftmost arrow (0-rat to 0-DB) -->
+      <div class="fragment" data-fragment-index="1">
+        <div style="position: absolute; left: 50px; top: 160px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+      </div>
+
+      <!-- Other vertical arrows -->
+      <div class="fragment" data-fragment-index="1">
+        <div style="position: absolute; left: 250px; top: 160px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+        <div style="position: absolute; left: 450px; top: 160px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+        <div style="position: absolute; left: 650px; top: 160px; transform: translate(-50%, -50%); color: #cc3333;">$\Uparrow$</div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <svg viewBox="0 0 1000 500" width="100%" height="600px">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#FFB000" />
+      </marker>
+    </defs>
+    <style>
+      .blue { stroke: #00008B; fill: none; stroke-width: 2; }
+      .red { stroke: #8B0000; fill: none; stroke-width: 2; }
+      .blue-text { fill: #00008B; font-family: sans-serif; font-size: 22px; text-anchor: middle; }
+      .red-text { fill: #8B0000; font-family: sans-serif; font-size: 22px; text-anchor: middle; }
+      .orange-text { fill: #FFB000; font-family: sans-serif; font-size: 24px; }
+      .dashed-red { stroke: #8B0000; stroke-width: 2; stroke-dasharray: 4,4; }
+    </style>
+
+    <!-- Ellipses -->
+    <g class="fragment" data-fragment-index="1">
+      <ellipse cx="500" cy="230" rx="450" ry="210" class="blue" />
+      <text x="500" y="50" class="blue-text">pre-0-DB</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="4">
+      <ellipse cx="560" cy="230" rx="320" ry="150" class="red" />
+      <text x="750" y="120" class="red-text">pre-0-rat</text>
+    </g>
+
+    <g class="fragment" data-fragment-index="2">
+      <ellipse cx="440" cy="230" rx="330" ry="150" class="blue" />
+      <text x="320" y="120" class="blue-text">pre-1-DB</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="5">
+5      <ellipse cx="520" cy="230" rx="180" ry="80" class="red" />
+      <text x="620" y="210" class="red-text">pre-1-rat</text>
+      <text x="620" y="240" class="blue-text">...</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="3">
+      <ellipse cx="380" cy="230" rx="180" ry="80" class="blue" />
+      <text x="260" y="235" class="blue-text">pre-n-DB</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="6">
+      <ellipse cx="460" cy="230" rx="60" ry="30" class="red" />
+      <text x="460" y="235" class="red-text">pre-n-rat</text>
+    </g>
+
+    <!-- Orange Texts and Arrows -->
+    <g class="fragment" data-fragment-index="7">
+      <path d="M 150 450 Q 150 350 330 260" stroke="#FFB000" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+      <text x="50" y="470" class="orange-text">Non-simplicial toric varieties</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="8">
+      <path d="M 650 450 Q 650 350 470 250" stroke="#FFB000" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+      <text x="560" y="480" class="orange-text">Quotient singularities</text>
+      <text x="560" y="510" class="orange-text">Simplicial toric varieties</text>
+
+    </g>
+  </svg>
+  <div style="position: absolute; bottom: 10px; right: 10px; font-size: 0.5em; color: #666;">image credit - Anh Duc Vo</div>
+  </section>

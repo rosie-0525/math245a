@@ -1,0 +1,252 @@
+<section>
+  <section>
+    <style>
+    .proof-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    #db-reg-table {
+      margin: 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 0.7em;
+      background: rgba(128, 128, 128, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(128, 128, 128, 0.2);
+      table-layout: fixed;
+      width: 645px;
+    }
+    
+    #db-reg-table th, #db-reg-table td {
+      padding: 12px 8px;
+      border: 1px solid rgba(128, 128, 128, 0.2);
+      text-align: center;
+      width: 85px;
+      height: 45px;
+      transition: background-color 0.2s;
+      overflow: hidden;
+    }
+
+    #db-reg-table th:first-child {
+      width: 50px;
+    }
+    
+    #db-reg-table th {
+      background: rgba(128, 128, 128, 0.15);
+      font-weight: 600;
+    }
+    
+    #db-reg-table td:hover {
+      background: rgba(128, 128, 128, 0.15);
+    }
+
+    .controls-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 0.8em;
+      text-align: left;
+      background: rgba(128, 128, 128, 0.08);
+      padding: 20px 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(128, 128, 128, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      min-width: 150px;
+    }
+    
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .label-text {
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .input-row label {
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    .input-row input {
+      width: 70px;
+      font-size: 1.1em;
+      padding: 8px 10px;
+      border: 1px solid rgba(128, 128, 128, 0.4);
+      border-radius: 8px;
+      background: var(--r-background-color, #fff);
+      color: var(--r-main-color, #333);
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    
+    .input-row input:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    }
+    
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .action-buttons button {
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 12px 24px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #4a90e2;
+      color: white;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
+      font-family: inherit;
+      letter-spacing: 0.5px;
+    }
+    
+    .action-buttons button:hover {
+      background: #357abd;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(74, 144, 226, 0.3);
+    }
+    
+    .action-buttons button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+    }
+  </style>
+
+  <h2>Du Bois invariants</h2>
+  
+  <div class="proof-container">
+    <table id="db-reg-table">
+    <thead>
+      <tr>
+        <th>$q \setminus p$</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td id="cell-0-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-1"><span class="math-content">$\mathcal{H}^{1} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td id="cell-0-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-2"><span class="math-content">$\mathcal{H}^{2} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td id="cell-0-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-3"><span class="math-content">$\mathcal{H}^{3} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td id="cell-0-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-4"><span class="math-content">$\mathcal{H}^{4} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td id="cell-0-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-5"><span class="math-content">$\mathcal{H}^{5} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td id="cell-0-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{0}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-1-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{1}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-2-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{2}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-3-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{3}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-4-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{4}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-5-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{5}$</span><span class="zero-content" style="display:none;">0</span></td>
+        <td id="cell-6-6"><span class="math-content">$\mathcal{H}^{6} \underline{\Omega}^{6}$</span><span class="zero-content" style="display:none;">0</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+    <div class="controls-panel">
+      <div class="input-group">
+        <div class="label-text">$m$-Du Bois</div>
+        <div class="input-row">
+          <label for="m-db-input"> $m = $</label>
+          <input type="number" id="m-db-input" min="-1" max="6" value="-1">
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="label-text">$K_t$-regular</div>
+        <div class="input-row">
+          <label for="t-reg-input"> $t = $</label>
+          <input type="number" id="t-reg-input" min="-7" max="6" value="-7">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button id="steenbrink-btn">Steenbrink vanishing</button>
+    <button id="lci-isolated-btn">lci, isolated</button>
+    <button id="lci-dim1-btn">lci, dim X_sing=1</button>
+    <button id="extra-vanishing-btn">extra vanishing</button>
+  </div>
+  </section>
+  <section>
+    <h2>Vanishing theorems for Du Bois complexes</h2>
+    <ul>
+      <li><strong>Steenbrink:</strong> lci, isolated</li>
+      <li><strong>Mustață-Popa:</strong> lci</li>
+      <li><strong>Popa-S.-Vo:</strong> isolated + extra vanishing</li>
+      <!-- <li><strong>Kovács:</strong> general</li> -->
+    </ul>
+  </section>
+</section>

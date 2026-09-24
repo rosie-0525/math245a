@@ -1,0 +1,992 @@
+/* ── Theme overrides (reveal.js white theme) ── */
+
+:root {
+  --paper: #fbfaf7;
+  --ink: #21212e;
+  --crimson: #a51c30;
+  --slate: #4a6fa5;
+  --muted: #8d887c;
+
+  --r-background-color: var(--paper);
+  --r-main-font: 'Charter', 'Georgia', 'Times New Roman', serif;
+  --r-main-font-size: 24px;
+  --r-main-color: var(--ink);
+  --r-heading-font: 'Charter', 'Georgia', 'Times New Roman', serif;
+  --r-heading-color: var(--ink);
+  --r-heading-text-transform: none;
+  --r-heading1-size: 2.2em;
+  --r-heading2-size: 1.5em;
+  --r-heading-letter-spacing: -0.01em;
+  --r-link-color: var(--slate);
+}
+
+/* ── Heading decoration ── */
+
+.reveal h2 {
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(33, 33, 46, 0.16);
+}
+
+/* ── Slide content ── */
+
+.reveal .slides section {
+  text-align: left;
+  line-height: 1.75;
+}
+
+.reveal .slides section p {
+  margin-bottom: 0.6rem;
+}
+
+/* ── Title & end slides ── */
+
+.reveal .slides section.title-slide,
+.reveal .slides section.end-slide {
+  text-align: center;
+}
+
+.reveal .title-slide h1,
+.reveal .end-slide h1 {
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  border: none;
+}
+
+.reveal .title-decor {
+  position: absolute;
+  left: 50%;
+  /* The box must not extend below the slide text: Reveal centers via
+     slide.scrollHeight, which counts any downward (post-transform) box
+     overflow. So the box hangs upward from the vertical midpoint and
+     the SVG shifts its drawing 350px down internally — SVG ink
+     overflow doesn't affect scrollHeight. */
+  bottom: 50%;
+  width: 960px;
+  height: 700px;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  /* Cut the picture at the slide's bottom edge (the node tail extends
+     below it); the drawing sits 350px below the box, hence -350px.
+     Other sides stay unclipped for the gradient fades. */
+  clip-path: inset(-9999px -9999px -350px -9999px);
+}
+
+.reveal .title-decor svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.reveal .title-rule {
+  width: 3.2rem;
+  height: 1px;
+  border: 0;
+  background: rgba(33, 33, 46, 0.3);
+  margin: 2.1rem auto 1.9rem;
+}
+
+.reveal .title-slide .author {
+  font-size: 1.05em;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+
+.reveal .title-slide .joint {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #6b675d;
+  margin-bottom: 0;
+}
+
+.reveal .title-slide .date {
+  font-size: 0.75em;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-top: 1.6rem;
+}
+
+/* ── TOC slide ── */
+
+.reveal .slides section.toc-slide {
+  text-align: center;
+}
+
+.reveal .toc-list {
+  list-style: none;
+  font-size: 1.3em;
+  line-height: 2.4;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  counter-reset: toc;
+}
+
+.reveal .toc-list li {
+  color: #a29d91;
+  transition: color 0.3s;
+  counter-increment: toc;
+}
+
+.reveal .toc-list li.toc-active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.reveal .toc-list li::before {
+  content: counter(toc, upper-roman);
+  display: inline-block;
+  min-width: 2.2rem;
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  color: #b9b4a8;
+}
+
+.reveal .toc-list li.toc-active::before {
+  color: var(--crimson);
+}
+
+/* ── Fragment transitions ── */
+
+.reveal .slides section .fragment {
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal .slides section .fragment.visible {
+  transform: translateY(0);
+}
+
+/* ── Lists ── */
+
+.reveal .slides section ul,
+.reveal .slides section ol {
+  display: block;
+  margin: 0.8rem 0 0.8rem 1.6rem;
+}
+
+.reveal .slides section li {
+  margin-bottom: 0.45rem;
+}
+
+.reveal .proof-list li {
+  margin-bottom: 0.8rem;
+}
+
+.reveal .transition-text {
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* ── Blocks: definition, theorem, example, question ── */
+
+.reveal .block {
+  margin: 1rem 0;
+  padding: 1rem 1.4rem;
+  border-radius: 0 4px 4px 0;
+  border-left: 3px solid;
+}
+
+.reveal .block-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 1em;
+}
+
+.reveal .block.definition {
+  background: #f0f4f8;
+  border-color: #4a6fa5;
+}
+
+.reveal .block.definition .block-title {
+  color: #4a6fa5;
+}
+
+.reveal .block.theorem {
+  background: #fdf6f0;
+  border-color: #a51c30;
+}
+
+.reveal .block.theorem .block-title {
+  color: #a51c30;
+}
+
+.reveal .block.example {
+  background: #f0f8f4;
+  border-color: #2a7a4b;
+}
+
+.reveal .block.example .block-title {
+  color: #2a7a4b;
+}
+
+.reveal .block.question {
+  background: #f5f0f8;
+  border-color: #6a4fa5;
+}
+
+.reveal .block.question .block-title {
+  color: #6a4fa5;
+}
+
+/* ── Two-column layout ── */
+
+.reveal .two-col {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 0.6rem;
+}
+
+.reveal .two-col-main {
+  flex: 1 1 55%;
+  min-width: 0;
+}
+
+.reveal .two-col-side {
+  flex: 0 0 auto;
+  max-width: 40%;
+  text-align: center;
+}
+
+.reveal .two-col-side .surface-image {
+  max-height: 300px;
+}
+
+.reveal .image-caption {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ── K-group description list ── */
+
+.reveal .k-group-dl {
+  margin: 0;
+  padding: 0;
+}
+
+.reveal .k-group-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.reveal .k-group-entry:last-child {
+  border-bottom: none;
+}
+
+.reveal .k-group-entry dt {
+  flex: 0 0 auto;
+  font-weight: 700;
+  color: var(--crimson);
+  font-size: 1.05em;
+  min-width: 5.5rem;
+}
+
+.reveal .k-group-entry dd {
+  margin: 0;
+  flex: 1;
+}
+
+.reveal .k-attr {
+  font-size: 0.88em;
+  color: #888;
+  margin-right: 0.3rem;
+}
+
+/* ── Math ── */
+
+.reveal .katex-display {
+  margin: 1rem 0;
+}
+
+/* ── Images ── */
+
+.reveal .surface-image {
+  max-height: 420px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.reveal .image-placeholder {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reveal .surface-sketch svg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ── Tables ── */
+
+.reveal .k-reg-table {
+  margin: 0.8rem auto;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.reveal .k-reg-table th,
+.reveal .k-reg-table td {
+  padding: 0.35rem 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.reveal .k-reg-table th {
+  background: #f0f4f8;
+  font-weight: 600;
+  color: #4a6fa5;
+}
+
+.reveal .k-reg-table .check {
+  color: #2a7a4b;
+  font-weight: 600;
+}
+
+.reveal .k-reg-table .cross {
+  color: #a51c30;
+}
+
+/* ── Reveal chrome ── */
+
+.reveal .slide-number {
+  background: transparent;
+  font-family: var(--r-main-font);
+  font-size: 15px;
+  color: var(--muted);
+  right: auto;
+  left: 16px;
+  bottom: 12px;
+}
+
+.reveal .progress {
+  height: 3px;
+  color: var(--crimson);
+  background: rgba(33, 33, 46, 0.06);
+}
+
+.reveal .controls {
+  color: var(--crimson);
+}
+
+/* ── Code ── */
+
+.reveal code {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  background: #f0f0f0;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.92em;
+}
+
+/* ── Welcome slide ──
+ * Adapted from the Math 51 deck. Everything rests in its final position;
+ * the entrance animations run only while the slide is .present (reveal
+ * re-adds the class each time the slide is entered, so they replay) and
+ * fill backwards from the hidden state. Print/PDF and reduced-motion
+ * therefore get the finished picture. */
+
+.reveal .slides section.welcome-slide {
+  padding: 0;
+}
+
+.reveal .welcome-slide .welcome-stage {
+  position: relative;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal .welcome-slide .welcome-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal .welcome-slide .welcome-text {
+  position: relative;
+  text-align: center;
+}
+
+.reveal .welcome-slide .eyebrow {
+  font-size: 0.7em;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--crimson);
+  margin: 0 0 0.2em;
+}
+
+.reveal .welcome-slide h1 {
+  font-size: 3.6em;
+  line-height: 1.1;
+  margin: 0 0 0.2em;
+  font-weight: 700;
+}
+
+.reveal .welcome-slide .letter {
+  display: inline-block;
+}
+
+.reveal .welcome-slide .welcome-rule {
+  width: 150px;
+  height: 5px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background: var(--crimson);
+}
+
+.reveal .welcome-slide .welcome-curve {
+  opacity: 0.8;
+}
+
+.reveal .welcome-slide .stroke {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.reveal .welcome-slide.present .welcome-grid {
+  animation: welcome-fade 1.2s ease-out both;
+}
+
+/* Once the word is in place, a ripple runs through it every 4.5 s: each
+ * letter in turn lifts slightly and blushes crimson, then settles. The wave
+ * is listed second so it wins over the finished rise while running. */
+.reveal .welcome-slide.present .letter {
+  animation:
+    welcome-rise 0.7s cubic-bezier(0.2, 0.8, 0.3, 1) both,
+    welcome-wave 4.5s ease-in-out infinite;
+  animation-delay:
+    calc(0.25s + var(--i) * 0.07s),
+    calc(2.2s + var(--i) * 0.18s);
+}
+
+.reveal .welcome-slide.present .eyebrow {
+  animation: welcome-fade 0.8s ease-out 0.1s both;
+}
+
+.reveal .welcome-slide.present .welcome-rule {
+  animation: welcome-grow 0.7s cubic-bezier(0.2, 0.8, 0.3, 1) 0.85s both;
+}
+
+/* Each curve draws itself, its singular point (if any) pops in, and then
+ * the curve sways gently about that point (its local origin). */
+.reveal .welcome-slide.present .welcome-curve {
+  animation: welcome-sway 8s ease-in-out infinite alternate;
+  animation-delay: calc(2.4s + var(--i) * -1.1s);
+}
+
+.reveal .welcome-slide.present .welcome-curve .stroke {
+  animation: welcome-draw 1.1s ease-in-out both;
+  animation-delay: calc(0.8s + var(--i) * 0.15s);
+}
+
+.reveal .welcome-slide .welcome-curve .singular {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.reveal .welcome-slide.present .welcome-curve .singular {
+  animation:
+    welcome-pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) both,
+    welcome-pulse 3.2s ease-in-out infinite;
+  animation-delay:
+    calc(2s + var(--i) * 0.15s),
+    calc(3s + var(--i) * 0.4s);
+}
+
+@keyframes welcome-fade {
+  from { opacity: 0; }
+}
+
+@keyframes welcome-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+}
+
+@keyframes welcome-grow {
+  from { transform: scaleX(0); }
+}
+
+@keyframes welcome-wave {
+  0%, 14%, 100% {
+    transform: none;
+    color: var(--ink);
+  }
+  7% {
+    transform: translateY(-0.12em);
+    color: var(--crimson);
+  }
+}
+
+@keyframes welcome-draw {
+  from { stroke-dashoffset: 1; }
+}
+
+@keyframes welcome-pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes welcome-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+}
+
+@keyframes welcome-sway {
+  from { transform: rotate(-4deg); }
+  to { transform: rotate(4deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .welcome-slide * {
+    animation: none !important;
+  }
+}
+
+/* ── Course overview slides ── */
+
+.reveal .h2-aside {
+  font-size: 0.55em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Label column on the left, set against a thin crimson rule */
+.reveal .course-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+  align-items: baseline;
+  margin: 0;
+}
+
+.reveal .course-facts dt {
+  font-style: italic;
+  font-size: 0.95em;
+  color: var(--muted);
+  text-align: right;
+  padding-right: 1.6rem;
+  border-right: 2px solid var(--crimson);
+  line-height: 1.5;
+}
+
+.reveal .course-facts dd {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.reveal .course-facts dd.course-topic {
+  font-size: 1.45em;
+  font-weight: 600;
+  color: var(--crimson);
+}
+
+.reveal .course-mail {
+  display: block;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.72em;
+  color: var(--slate);
+}
+
+/* Hodge theory ⟶ K-theory bridge on the theme slide */
+.reveal .theme-bridge {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.4rem 0 1.2rem;
+}
+
+.reveal .theme-side {
+  flex: 0 1 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border-top: 3px solid;
+  font-size: 0.95em;
+}
+
+.reveal .theme-kicker {
+  font-weight: 700;
+  font-size: 0.85em;
+  margin-bottom: 0.2rem;
+}
+
+.reveal .k-side {
+  background: #fdf6f0;
+  border-color: var(--crimson);
+}
+
+.reveal .k-side .theme-kicker {
+  color: var(--crimson);
+}
+
+.reveal .h-side {
+  background: #f0f4f8;
+  border-color: var(--slate);
+}
+
+.reveal .h-side .theme-kicker {
+  color: var(--slate);
+}
+
+.reveal .theme-arrow {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.6em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Three-part course plan */
+.reveal .plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.reveal .plan-part,
+.reveal .ref-col {
+  padding: 0.7rem 0.9rem 0.4rem;
+  border-top: 3px solid;
+  border-radius: 0 0 4px 4px;
+}
+
+.reveal .part-k {
+  background: #fdf6f0;
+  border-color: var(--crimson);
+  --part: var(--crimson);
+}
+
+.reveal .part-h {
+  background: #f0f4f8;
+  border-color: var(--slate);
+  --part: var(--slate);
+}
+
+.reveal .part-bridge {
+  background: #f5f0f8;
+  border-color: #6a4fa5;
+  --part: #6a4fa5;
+}
+
+.reveal .plan-num {
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--part);
+}
+
+.reveal .plan-title {
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--part);
+  margin-bottom: 0.4rem;
+}
+
+.reveal .slides section .plan-part ul,
+.reveal .slides section .ref-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.68em;
+  line-height: 1.4;
+}
+
+.reveal .slides section .plan-part li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(33, 33, 46, 0.1);
+}
+
+/* References */
+.reveal .ref-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.reveal .slides section .ref-col ul {
+  font-size: 0.8em;
+}
+
+.reveal .slides section .ref-list li {
+  margin-bottom: 0.7rem;
+}
+
+/* Preview divider (the old talk title) */
+.reveal .title-slide .preview-eyebrow {
+  margin: 0 0 1.2rem;
+  color: var(--crimson);
+}
+
+.reveal .nw {
+  white-space: nowrap;
+}
+
+.reveal .slides section .prereq-list {
+  margin-top: 0.2rem;
+}
+
+.reveal .slides section .plan-footer {
+  margin-top: 1.1rem;
+}
+
+/* ── About me ── */
+
+.reveal .about-stage {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reveal .slides section .about-list {
+  flex: 1 1 auto;
+  margin-left: 1.2rem;
+}
+
+.reveal .slides section .about-list li {
+  margin-bottom: 0.9rem;
+}
+
+/* The pictures share one grid cell, so each new one lands on the last. */
+.reveal .photo-stack {
+  flex: 0 0 340px;
+  display: grid;
+  height: 400px;
+}
+
+.reveal .photo-stack .photo-slot {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.reveal .photo-stack figure {
+  margin: 0;
+  text-align: center;
+}
+
+.reveal .photo-stack img {
+  display: block;
+  max-width: 340px;
+  max-height: 360px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(33, 33, 46, 0.18);
+}
+
+.reveal .photo-stack figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.7em;
+  font-style: italic;
+  color: var(--crimson);
+  line-height: 1.3;
+}
+
+.reveal .photo-stack .img-credit {
+  display: block;
+  font-size: 0.6em;
+  font-style: normal;
+  color: var(--muted);
+}
+
+/* ── Question / sample-answer table ── */
+
+.reveal .qa-table {
+  width: 100%;
+  margin: 0.6rem 0 0;
+  border-collapse: collapse;
+  counter-reset: qa;
+}
+
+.reveal .qa-table th,
+.reveal .qa-table td {
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(33, 33, 46, 0.14);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.reveal .qa-table th {
+  background: #f0f4f8;
+  color: var(--slate);
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.reveal .qa-table td.qa-q {
+  width: 21rem;
+  font-weight: 600;
+  line-height: 1.4;
+  counter-increment: qa;
+}
+
+.reveal .qa-table td.qa-q::before {
+  content: counter(qa) '.';
+  color: var(--crimson);
+  margin-right: 0.5rem;
+}
+
+.reveal .qa-table td.qa-a {
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.reveal .qa-table .katex-display {
+  margin: 0.4rem 0 0;
+}
+
+/* reveal's theme drops the last row's bottom border */
+.reveal .qa-table tbody tr:last-child td {
+  border-bottom: 1px solid rgba(33, 33, 46, 0.14);
+}
+
+.reveal .end-slide .next-time {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #6b675d;
+}
+
+/* ── General picture: Hodge theory ⟶ K-theory ── */
+
+.reveal .gp-grid {
+  display: grid;
+  grid-template-columns: auto 7.5rem auto;
+  /* the last, empty row is the panels' bottom padding */
+  grid-template-rows: repeat(6, auto) 0.5rem;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.6rem;
+  margin-top: 1.4rem;
+  white-space: nowrap;
+}
+
+.reveal .gp-panel {
+  grid-row: 1 / 8;
+  align-self: stretch;
+  border-radius: 8px;
+  border-top: 3px solid;
+  z-index: 0;
+}
+
+.reveal .gp-hodge {
+  grid-column: 1;
+  background: #f0f4f8;
+  border-color: var(--slate);
+}
+
+.reveal .gp-k {
+  grid-column: 3;
+  background: #fdf6f0;
+  border-color: var(--crimson);
+}
+
+.reveal .gp-l,
+.reveal .gp-r {
+  position: relative;
+  z-index: 1;
+  padding: 0 1.3rem;
+  font-size: 1.05em;
+}
+
+.reveal .gp-l {
+  grid-column: 1;
+  text-align: center;
+}
+
+.reveal .gp-r {
+  grid-column: 3;
+  text-align: left;
+}
+
+.reveal .gp-head {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-top: 0.7rem;
+  padding-bottom: 0.5rem;
+}
+
+.reveal .gp-head.gp-l {
+  color: var(--slate);
+}
+
+.reveal .gp-head.gp-r {
+  color: var(--crimson);
+  text-align: center;
+}
+
+/* the ⇕ and + that join the Hodge-theoretic conditions */
+.reveal .gp-link {
+  color: var(--muted);
+  line-height: 1.1;
+}
+
+/* the arrow sits on the row's midline; its pill hangs above it */
+.reveal .gp-m {
+  grid-column: 2;
+  position: relative;
+  text-align: center;
+  line-height: 1;
+}
+
+.reveal .gp-arrow {
+  font-size: 1.1em;
+  color: var(--ink);
+}
+
+.reveal .gp-tag {
+  font-size: 0.55em;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.15em;
+  white-space: nowrap;
+}
+
+.reveal .gp-tag.thm {
+  color: var(--crimson);
+}
+
+.reveal .gp-tag.conj {
+  color: var(--slate);
+}

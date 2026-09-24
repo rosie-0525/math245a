@@ -1,0 +1,68 @@
+  <section>
+    <div class="block theorem">
+      <div class="block-title">Theorem (Srinivas, Weibel)</div>
+      <p>
+        For a normal surface $\operatorname{Spec} R$,
+        \[K_{-1}(R) \cong \bigoplus_{\mathfrak{m}\in R_{\mathrm{sing}}} \operatorname{Cl}(\widehat{R}_\mathfrak{m})/\operatorname{Cl}(R)\]
+      </p>
+    </div>
+    <div class="block example fragment">
+      <div class="block-title">Example: Rational double points</div>
+      <p style="font-size: 0.85em; margin-bottom: 0.5em;">
+        Suppose $k$ has characteristic zero. $R$ has a <em>rational double point</em> if $\widehat{R} \cong k[[x,y,z]]/(f)$ for:
+      </p>
+      <table style="font-size: 0.75em; margin: 0 auto; border-collapse: collapse; text-align: left;">
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(A_n)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^{n+1} + xy$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/(n+1)$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">$(D_n), n \geq 4$</td>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">$f = z^2 + xy^2 + x^{n-1}$</td>
+          <td style="padding: 0.2em 1em; border: none; vertical-align: middle;">
+            $\operatorname{Cl}(\widehat{R}) \cong \begin{cases} (\mathbb{Z}/2)^2 & \text{for } n \text{ even,} \\ \mathbb{Z}/4 & \text{for } n \text{ odd.} \end{cases}$
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_6)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + y^3 + x^4$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/3$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_7)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + x^3y + y^3$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) \cong \mathbb{Z}/2$</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.2em 1em; border: none;">$(E_8)$</td>
+          <td style="padding: 0.2em 1em; border: none;">$f = z^2 + x^3 + y^5$</td>
+          <td style="padding: 0.2em 1em; border: none;">$\operatorname{Cl}(\widehat{R}) = 0$</td>
+        </tr>
+      </table>
+      <p style="font-size: 0.85em; margin-top: 0.8em; margin-bottom: 0;">
+        In particular, $K_{-1}(R)$ is torsion in these cases.
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="fragment" style="margin-bottom: 2rem;">
+      <p>
+        Recall that a normal variety $X$ has <strong>rational singularities</strong> if for a resolution of singularities $f: \tilde{X} \to X$, $R^i f_* \mathcal{O}_{\tilde{X}} = 0$ for all $i > 0$.
+      </p>
+    </div>
+    <div class="block theorem fragment">
+      <div class="block-title">Theorem (Artin)</div>
+      <p>
+        For surfaces in $\mathbb{A}^3$,
+        $$\text{rational double points} = \text{rational singularities}.$$
+      </p>
+    </div>
+    <div class="block theorem fragment" style="margin-top: 2rem;">
+      <div class="block-title">Theorem</div>
+      <p>
+        Let $X$ be a complex projective variety of dimension $d \geq 2$. If $X$ has rational singularities, then
+        $$K_{-d}(X) \text{ and } K_{-d+1}(X) \text{ are torsion.}$$
+      </p>
+    </div>
+  </section>

@@ -1,0 +1,157 @@
+<section>
+  <section>
+    <h2>Singularities of algebraic varieties</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 30px; margin-top: 20px;">
+      <style>
+        .singularity-item {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .singularity-img {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
+          mix-blend-mode: multiply;
+        }
+        .singularity-title {
+          margin-top: 5px;
+          font-size: 18px;
+        }
+      </style>
+      
+      <div class="singularity-item">
+        <img src="/dullo.png" class="singularity-img" alt="dullo">
+        <div class="singularity-title">\( (x^2+y^2+z^2)^2 - (x^2+y^2)=0 \)</div>
+      </div>
+      
+      <div class="singularity-item">
+        <img src="/zitrus.png" class="singularity-img" alt="zitrus">
+        <div class="singularity-title">\( x^2+z^2=y^3(y-1)^3 \)</div>
+      </div>
+
+      <div class="singularity-item">
+        <img src="/fanfare.png" class="singularity-img" alt="fanfare">
+        <div class="singularity-title">\( -x^3+z^2+y^2 \)</div>
+      </div>
+      
+      <div class="singularity-item">
+        <img src="/kolibri.png" class="singularity-img" alt="kolibri">
+        <div class="singularity-title">\( x^3 + x^2z^2 - y^2 \)</div>
+      </div>
+      
+      <div class="singularity-item">
+        <img src="/zeck.png" class="singularity-img" alt="zeck">
+        <div class="singularity-title">\( x^2+y^2-z^3(1-z) \)</div>
+      </div>
+
+      <div class="singularity-item">
+        <img src="/sofa.png" class="singularity-img" alt="sofa">
+        <div class="singularity-title">\( x^2+y^5+z^5 \)</div>
+      </div>
+    </div>
+    
+    <div style="position: absolute; bottom: -50px; right: 0; font-size: 14px; color: #666;">
+      Photo credit: Herwig Hauser – Gallery of algebraic surfaces
+    </div>
+  </section>
+
+  <section> 
+    <svg viewBox="0 0 1000 600" width="100%" height="600px">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+        </marker>
+      </defs>
+      <style>
+        .node-text { font-family: sans-serif; font-size: 36px; text-anchor: middle; fill: #333; }
+        .edge-text { font-family: sans-serif; font-size: 22px; text-anchor: middle; fill: #555; }
+        .squiggly-arrow { fill: none; stroke: #333; stroke-width: 3; }
+        .db-ellipse { fill: none; stroke: #00008B; stroke-width: 3; }
+        .db-text { font-family: sans-serif; font-size: 32px; fill: #00008B; text-anchor: middle; }
+      </style>
+
+      <!-- 1. display "smooth varieties" -->
+      <g class="fragment" data-fragment-index="1">
+        <text x="250" y="310" class="node-text">smooth varieties</text>
+      </g>
+
+      <!-- 2. Top arrow and first "singularities" -->
+      <g class="fragment" data-fragment-index="2">
+        <line x1="400" y1="290" x2="630" y2="230" class="squiggly-arrow" marker-end="url(#arrowhead)" />
+        <!-- Rotate text to match the arrow angle roughly -->
+        <text x="500" y="220" class="edge-text" transform="rotate(-15, 500, 220)">classification theory</text>
+        <text x="500" y="250" class="edge-text" transform="rotate(-15, 500, 250)">of algebraic varieties</text>
+        
+        <text x="750" y="220" class="node-text">singularities</text>
+      </g>
+
+      <!-- 3. Bottom arrow and second "singularities" -->
+      <g class="fragment" data-fragment-index="3">
+        <line x1="400" y1="330" x2="630" y2="390" class="squiggly-arrow" marker-end="url(#arrowhead)" />
+        <text x="500" y="400" class="edge-text" transform="rotate(15, 500, 400)">compactification of moduli</text>
+        
+        <text x="750" y="410" class="node-text">singularities</text>
+      </g>
+
+      <!-- 4. ellipse with "Du Bois singularities" -->
+      <g class="fragment" data-fragment-index="4">
+        <ellipse cx="500" cy="310" rx="460" ry="260" class="db-ellipse" />
+        <text x="950" y="60" class="db-text" style="text-anchor: end;">Du Bois singularities</text>
+      </g>
+    </svg>
+  </section>
+  <section>
+  <svg viewBox="-100 -50 1200 600" width="120%" height="600px" style="margin-left: -10%;">
+    <style>
+      .blue { stroke: #00008B; fill: none; stroke-width: 2; }
+      .red { stroke: #8B0000; fill: none; stroke-width: 2; }
+      .blue-text { fill: #00008B; font-family: sans-serif; font-size: 24px; }
+      .red-text { fill: #8B0000; font-family: sans-serif; font-size: 24px; }
+      .orange-text { fill: #D2691E; font-family: sans-serif; font-size: 20px; }
+      .dot { fill: #D2691E; }
+    </style>
+
+    <!-- Ellipses -->
+    <g class="fragment" data-fragment-index="1">
+      <ellipse cx="500" cy="250" rx="540" ry="264" class="blue" />
+      <text x="100" y="50" class="blue-text">Du Bois</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="2">
+      <ellipse cx="520" cy="250" rx="360" ry="192" class="red" />
+      <text x="220" y="120" class="red-text">rational</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="3">
+      <ellipse cx="570" cy="250" rx="240" ry="120" class="blue" />
+      <text x="320" y="180" class="blue-text">1-Du Bois</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="4">
+      <ellipse cx="600" cy="250" rx="150" ry="70" class="red" />
+      <text x="420" y="220" class="red-text">1-rational</text>
+      <text x="540" y="255" class="blue-text">...</text>
+    </g>
+    
+    <g class="fragment" data-fragment-index="5">
+      <ellipse cx="640" cy="250" rx="72" ry="40" class="blue" />
+      <text x="645" y="255" class="blue-text">smooth</text>
+    </g>
+
+    <g class="fragment" data-fragment-index="6">
+      <image href="/sofa.png" x="-120" y="350" width="140" height="140" style="mix-blend-mode: multiply;" />
+    </g> 
+
+    <g class="fragment" data-fragment-index="7">
+      <image href="/dullo.png" x="15" y="220" width="140" height="140" style="mix-blend-mode: multiply;" />
+    </g>
+
+    <g class="fragment" data-fragment-index="8">
+      <image href="/fanfare.png" x="180" y="220" width="140" height="140" style="mix-blend-mode: multiply;" />
+    </g>
+    </svg>
+  </section>
