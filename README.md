@@ -12,6 +12,7 @@ Hodge Theory and Algebraic K-Theory, Stanford, Autumn 2026. Course page and lect
 - `lectures/_template/`: a blank lecture to copy.
 - `src/deck.js`: shared reveal.js setup (KaTeX math, SageMathCell). `src/custom.css`: shared styles.
 - `public/`: images for all lectures. Reference them as `src="/name.png"`.
+- `public/notes/`: lecture notes (PDFs), linked from the course page as `notes/<name>.pdf`.
 - `syllabus.md`: source text for the course page and the first lecture.
 - `sage.html`: a standalone SageMathCell example (not part of the site).
 
@@ -21,6 +22,8 @@ Hodge Theory and Algebraic K-Theory, Stanford, Autumn 2026. Course page and lect
 2. Write slides in `lectures/NN/slides/`.
 3. Add a line for it under "Lectures" in `index.html`.
 4. Commit and push. The GitHub Action builds and publishes the site.
+
+For a lecture with notes instead of slides, put the PDF in `public/notes/`, link it from its line under "Lectures" as `notes/<name>.pdf`, and commit and push.
 
 No build configuration needs to change: `vite.config.js` picks up every folder in `lectures/` except `_template`.
 
