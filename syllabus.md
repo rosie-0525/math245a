@@ -1,6 +1,6 @@
 Instructor: Rosie Shen (email: wanchun@stanford.edu)
 
-Office hour: TBD
+Office hour: 4–5pm Monday, or by appointment
 
 
 
