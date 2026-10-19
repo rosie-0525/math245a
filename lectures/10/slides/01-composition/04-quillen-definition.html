@@ -1,0 +1,42 @@
+<section>
+  <h2>Exact categories: Quillen's definition</h2>
+  <div class="block definition" style="font-size: 0.86em; margin-top: 0;">
+    <div class="block-title">Definition (Quillen 1973, §2)</div>
+    An <em>exact category</em> is an additive category $\mathcal{C}$
+    <span class="fragment">with a class
+    $\mathcal{E}$ of sequences
+    <span class="nw">$0 \to A \xrightarrow{i} B \xrightarrow{j} C \to 0$</span>
+    (<em>short exact sequences</em>; $i$ is an <em>admissible mono</em>
+    $\rightarrowtail$, $j$ an <em>admissible epi</em> $\twoheadrightarrow$)
+    such that:</span>
+    <ol style="list-style-type: lower-alpha; margin: 0.3rem 0 0 1.6rem;">
+      <li class="fragment">
+        $\mathcal{E}$ is closed under isomorphism and contains
+        $0 \to A \to A \oplus C \to C \to 0$. For each sequence in $\mathcal{E}$,
+        $i = \ker j$ and $j = \operatorname{coker} i$ in $\mathcal{C}$.
+      </li>
+      <li class="fragment">
+        Admissible epis are closed under composition and under
+        <span style="color: #a51c30;">base change by arbitrary maps</span>.
+        Dually, admissible monos are closed under composition and under
+        <span style="color: #a51c30;">cobase change by arbitrary maps</span>.
+      </li>
+      <li class="fragment">
+        If $f\colon B \to C$ has a kernel in $\mathcal{C}$ and
+        $B' \to B \xrightarrow{f} C$ is an admissible epi for some
+        <span class="nw">$B' \to B$,</span> then $f$ is an admissible epi.
+        Dually for admissible monos.
+      </li>
+    </ol>
+  </div>
+  <ul class="fragment" style="font-size: 0.82em;">
+    <li>
+      “Base change exists” is part of (b): for $B \twoheadrightarrow C$ and any
+      $C' \to C$, the pullback $B \times_C C'$ exists in $\mathcal{C}$, and
+      $B \times_C C' \twoheadrightarrow C'$ is again an admissible epi.
+    </li>
+    <li>
+      (c) follows from (a) and (b) (Yoneda, Keller; see Bühler, Prop. 2.16).
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,45 @@
+<section>
+  <h2>Composition in $Q\mathcal{C}$</h2>
+  <p>
+    Given $X \twoheadleftarrow Y' \rightarrowtail Y$ and
+    $Y \twoheadleftarrow Z' \rightarrowtail Z$, take the fiber product
+    $P = Y' \times_Y Z'$:
+  </p>
+  <div class="cd-row">
+    <div class="cd" style="--cols: 7">
+      <span></span>
+      <span></span>
+      <span class="hl">$P$</span>
+      <span class="h"><i class="ar mono"></i></span>
+      <span>$Z'$</span>
+      <span class="h"><span class="lab">$i'$</span><i class="ar mono"></i></span>
+      <span>$Z$</span>
+
+      <span></span>
+      <span></span>
+      <span class="v"><i class="ar epi"></i></span>
+      <span class="pb">$\lrcorner$</span>
+      <span class="v"><span class="lab">$j'$</span><i class="ar epi"></i></span>
+      <span></span>
+      <span></span>
+
+      <span>$X$</span>
+      <span class="h"><span class="lab below">$j$</span><i class="ar epi left"></i></span>
+      <span>$Y'$</span>
+      <span class="h"><span class="lab below">$i$</span><i class="ar mono"></i></span>
+      <span>$Y$</span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <p>The composite $X \to Z$ is</p>
+  $$X \twoheadleftarrow P \rightarrowtail Z
+    \qquad (P \to Y' \to X \text{ and } P \to Z' \to Z).$$
+  <div class="block question fragment">
+    <div class="block-title">Question</div>
+    Why is the fiber product $P$ well-defined?
+  </div>
+  <p class="fragment transition-text">
+    Answer: it is built into the definition of an exact category.
+  </p>
+</section>

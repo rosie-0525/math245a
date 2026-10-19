@@ -990,3 +990,170 @@
 .reveal .gp-tag.conj {
   color: var(--slate);
 }
+
+/* ── Commutative diagrams ──
+ * A diagram is a grid of cells, filled row by row:
+ *   <div class="cd" style="--cols: 3">
+ *     <span>$A$</span> <span class="h"><i class="ar mono"></i></span> <span>$B$</span>
+ *     …
+ *   </div>
+ * Arrows: .ar (→), .ar.mono (↣), .ar.epi (↠), .ar.eq (=); .left points a
+ * horizontal arrow left. An arrow in a .v cell is vertical, pointing down
+ * (.v.up: up). A label goes in the arrow's cell, <span class="lab">$f$</span>:
+ * above a horizontal arrow (.lab.below: under it), right of a vertical one
+ * (.lab.l: left of it). A .pb cell holds a pull-back corner, $\lrcorner$;
+ * a .po cell a push-out corner, $\ulcorner$. */
+
+.reveal .cd {
+  display: inline-grid;
+  grid-template-columns: repeat(var(--cols), auto);
+  align-items: center;
+  justify-items: center;
+  column-gap: 0.3em;
+  line-height: 1.3;
+}
+
+.reveal .cd > * {
+  position: relative;
+}
+
+.reveal .cd .h {
+  display: flex;
+  align-items: center;
+}
+
+/* Narrow column: the rotated arrow overflows its unrotated width. */
+.reveal .cd .v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 2.4em;
+}
+
+.reveal .cd .ar {
+  --len: 2.4em;
+  --t: 0.075em;  /* stroke width */
+  --s: 0.4em;    /* arrowhead size */
+  --start: 0em;  /* where the shaft starts */
+  position: relative;
+  display: block;
+  flex: none;
+  width: var(--len);
+  height: var(--t);
+  background: linear-gradient(currentColor, currentColor) no-repeat;
+  background-position: var(--start) 0;
+  background-size: calc(100% - var(--start) - var(--t)) 100%;
+}
+
+/* Arrowheads are squares with two borders, turned 45° so the corner points
+ * right; their tips sit at the end of the shaft. */
+.reveal .cd .ar::after,
+.reveal .cd .ar.mono::before,
+.reveal .cd .ar.epi::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--t) / 2 - var(--s) / 2);
+  box-sizing: border-box;
+  width: var(--s);
+  height: var(--s);
+  border-top: var(--t) solid currentColor;
+  border-right: var(--t) solid currentColor;
+  transform: rotate(45deg);
+}
+
+.reveal .cd .ar::after {
+  right: calc(var(--s) * 0.2071);
+}
+
+.reveal .cd .ar.epi::before {
+  right: calc(var(--s) * 0.2071 + 0.2em);
+}
+
+/* The tail of ↣: a second head at the start, with the shaft leaving its tip. */
+.reveal .cd .ar.mono {
+  --start: calc(var(--s) * 0.7071);
+}
+
+.reveal .cd .ar.mono::before {
+  left: calc(var(--s) * -0.5);
+}
+
+.reveal .cd .ar.eq {
+  height: 0.22em;
+  background: none;
+  box-sizing: border-box;
+  border-top: var(--t) solid currentColor;
+  border-bottom: var(--t) solid currentColor;
+}
+
+.reveal .cd .ar.eq::after {
+  content: none;
+}
+
+.reveal .cd .ar.left {
+  transform: scaleX(-1);
+}
+
+.reveal .cd .v .ar {
+  --len: 2em;
+  transform: rotate(90deg);
+}
+
+.reveal .cd .v.up .ar {
+  transform: rotate(-90deg);
+}
+
+.reveal .cd .lab {
+  position: absolute;
+  font-size: 0.72em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.reveal .cd .h .lab {
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -0.3em);
+}
+
+.reveal .cd .h .lab.below {
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, 0.35em);
+}
+
+.reveal .cd .v .lab {
+  top: 50%;
+  left: calc(50% + 0.4em);
+  transform: translateY(-50%);
+}
+
+.reveal .cd .v .lab.l {
+  left: auto;
+  right: calc(50% + 0.4em);
+}
+
+.reveal .cd .pb {
+  align-self: start;
+  justify-self: start;
+  padding: 0.1em 0 0 0.25em;
+  font-size: 0.85em;
+}
+
+.reveal .cd .po {
+  align-self: end;
+  justify-self: end;
+  padding: 0 0.25em 0.1em 0;
+  font-size: 0.85em;
+}
+
+.reveal .cd .hl {
+  color: var(--crimson);
+}
+
+/* A centered diagram on its own line */
+.reveal .cd-row {
+  text-align: center;
+  margin: 0.8rem 0;
+}
